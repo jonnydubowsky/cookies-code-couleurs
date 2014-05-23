@@ -8,9 +8,15 @@ def rotation(angle):
     rotate(angle)
     yield
     popMatrix()
+    
+# Des couleurs sympas
+blanc = color(0, 0, 100)
+rouge = color(0, 100, 100)
+vert = color(119, 100, 100)
+bleu = color(239, 100, 10)
 
 noStroke()
-background(0)
+background(blanc) # la couleur du fond
 translate(width/2,height/2)
 for b in range(30):
     scale(0.9)
