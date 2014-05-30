@@ -54,9 +54,9 @@ background(255)
 #    v    v     v    v    v
 
 
-antonio(color(violet))
+antonio (violet)
 
-antonio(color(7,131,16)) #les chiffres sont le rouge, le vert et le bleu.
+antonio (color(7,131,16)) #les chiffres sont le rouge, le vert et le bleu.
  
 splash(cercle, rouge)
 
