@@ -13,7 +13,7 @@ def aumilieu():
     translate (width/2, height/2)
     
 def remonte ():
-    translate (40, 0)
+    translate (0, -40)
     
 def descend ():
     translate (0, 40)
@@ -40,13 +40,13 @@ def splash(forme, couleur):
     for n in range(30):
         pushMatrix()
         scale(1 + (random(10)-5)/20.0)
-        translate(random(width), random(height))
+        translate(random(width-n*3), random(height-n*3))
         fill(couleur)
-        forme(n)
+        forme(n*3)
         popMatrix()
     
 
-randomSeed(0)
+randomSeed(millis())
 blendMode(BLEND)
 background(255)    
 
