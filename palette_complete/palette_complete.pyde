@@ -83,7 +83,6 @@ def splash(forme):
         pushMatrix()
         scale(1 + (random(10)-5)/20.0)
         translate(random(width-n*3), random(height-n*3))
-        
         forme(n*3)
         popMatrix()
     
