@@ -13,6 +13,7 @@ vert = color(0, 255, 0)
 bleu = color(0, 0, 255)
 violet = color(116,49,193)
 vertsapin = color(7,131,16)
+orange = color(255, 150, 60)
 
 
 # Des déplacements simples
@@ -23,11 +24,23 @@ def aumilieu():
 def remonte ():
     translate (0, -40)
     
+def monte ():
+    remonte()
+    
 def descend ():
     translate (0, 40)
     
 def agauche ():
     translate (-40, 0)
+    
+def pluspetit():
+    scale(0.5)
+    
+def plusgrand():
+    scale(2)
+    
+def retourne():
+    scale(-1, -1)
 
 # Des formes de base
 def cercle(rayon):
@@ -65,12 +78,12 @@ def antonio(couleur):
         popMatrix()
         
         
-def splash(forme, couleur):
+def splash(forme):
     for n in range(30):
         pushMatrix()
         scale(1 + (random(10)-5)/20.0)
         translate(random(width-n*3), random(height-n*3))
-        fill(couleur)
+        
         forme(n*3)
         popMatrix()
     
@@ -98,34 +111,42 @@ def spirale(forme, fois):
 # v v v v v v v v v v v v v v v v v v v v v v v v v v v v
 
 
-antonio (violet)
+spirale (antonio, 50)
 
-antonio (color(7,131,16)) #les chiffres sont le rouge, le vert et le bleu.
- 
-splash(cercle, rouge)
+fill(blanc)
+splash(hexagone)
+
+fill(rouge)
+monte()
+monte()
+agauche()
+pluspetit()
+retourne()
+spirale(hexagone, 1800)
 
 aumilieu()
+fill(orange)
+pluspetit()
 descend()
 descend()
-fill(vert)
-ellipse(0,0,120,120)
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+spirale(hexagone, 1800)
 
-fill(blanc)
-ellipse(0,0,100,100)
-
-fill(violet)
-ellipse(0,0,70,70)
-
-fill(blanc)
-ellipse(0,0,40,40)
 
 
 
-# blendMode(EXCLUSION)
-# fill(255)
-# for n in range(5):
-#     pushMatrix()
-#     translate(random(width),random(height))
-#     cercle(150)
-#     popMatrix()
-
+# ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+# Ici c'est la fin... 

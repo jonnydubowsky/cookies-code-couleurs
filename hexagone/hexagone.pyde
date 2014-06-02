@@ -1,10 +1,10 @@
-size(600,800,P2D)
-frame.setLocation(1366-600, 0)
+size(630,724,P2D)
+frame.setLocation(1366-630, 0)
 background(255)
 noStroke()
 
 def hexagone(taille):
-    popMatrix
+    pushMatrix()
     translate (taille, taille)
     beginShape()
     stroke(0,0)
@@ -13,7 +13,7 @@ def hexagone(taille):
         y = sin( i * THIRD_PI ) * taille
         vertex( x, y )
     endShape()
-    pushMatrix
+    popMatrix()
     
 
 

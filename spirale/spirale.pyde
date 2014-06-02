@@ -1,14 +1,26 @@
-size(600,800,P2D)
+size(630,724,P2D)
+frame.setLocation(1366-630, 0)
 background(255)
 noStroke()
 
 rouge = color(255, 0, 0)
+vert = color(0, 255, 0)
+verte = vert
+
 
 def peinture(rouge, vert, bleu):
     fill(rouge, vert, bleu)
+    
+def aumilieu():
+    resetMatrix()
+    translate (width/2, height/2)
+    
 
 def remonte ():
     translate (0, -40)
+    
+def descend ():
+    translate (0, 40)
     
 def agauche ():
     translate (-40, 0)
@@ -20,7 +32,7 @@ def carre(largeur):
     rect(0,0,largeur,largeur)
     
 def hexagone(taille):
-    popMatrix
+    pushMatrix()
     translate (taille, taille)
     beginShape()
     stroke(0,0)
@@ -29,7 +41,7 @@ def hexagone(taille):
         y = sin( i * THIRD_PI ) * taille
         vertex( x, y )
     endShape()
-    pushMatrix
+    popMatrix()
 
     
 def spirale(forme, fois):
@@ -56,10 +68,10 @@ remonte()
 peinture(240, 0, 170)
 spirale(carre, 250)
 
-remonte()
-remonte()
-remonte()
-remonte()
+
+aumilieu()
+
+descend()
 agauche()
 agauche()
 agauche()
