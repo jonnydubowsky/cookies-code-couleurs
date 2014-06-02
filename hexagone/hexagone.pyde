@@ -1,4 +1,9 @@
-def hexagone(taille, couleur):
+size(600,800,P2D)
+frame.setLocation(1366-600, 0)
+background(255)
+noStroke()
+
+def hexagone(taille):
     popMatrix
     translate (taille, taille)
     beginShape()
@@ -9,10 +14,14 @@ def hexagone(taille, couleur):
         vertex( x, y )
     endShape()
     pushMatrix
-
     
+
+
+translate(50, 40)
+
 rouge = color(255, 0, 0)
+
 fill(rouge)
-hexagone(20)
+hexagone(100)
 
 

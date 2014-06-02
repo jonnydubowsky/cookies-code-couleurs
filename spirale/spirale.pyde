@@ -72,9 +72,5 @@ spirale(hexagone, 800)
 
 
 
-
-
-
-
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
 # Ici c'est la fin... 
