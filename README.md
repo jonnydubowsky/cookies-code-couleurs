@@ -3,7 +3,7 @@ Du code, des couleurs et des cookies
 
 Code pour l'atelier Du code, des couleurs et des cookies créé pour le Centre Pompidou.
 
-Les enfants remixent du code informatique pour produire des formes, des couleurs. Ils ajoutent, copie-collent, transforment leur code, et voient les images changer et évoluer sous leurs yeux, projetées par 14 vidéo-projecteurs sur les murs – c’est à dire 1 vidéo-projecteur par enfant ! Les enfants partent ensuite à la rencontre de 3 tableaux de Kupka, Valensi et McDonald Wright de 1920 à 1955, que le code nous fait revoir autrement.
+Les enfants remixent du code informatique pour produire des formes, des couleurs. Ils ajoutent, copient-collent, transforment leur code, et voient les images changer et évoluer sous leurs yeux, projetées par 14 vidéo-projecteurs sur les murs – c’est à dire 1 vidéo-projecteur par enfant ! Les enfants partent ensuite à la rencontre de 3 tableaux de Kupka, Valensi et McDonald Wright de 1920 à 1955, que le code nous fait revoir autrement.
 
 Nous utilisons Processing en Mode Python, pour la clarté de la syntaxe.
 
