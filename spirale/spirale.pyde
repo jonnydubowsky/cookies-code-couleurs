@@ -1,5 +1,6 @@
-size(630,724,P2D)
-frame.setLocation(1366-630, 0)
+# Des réglages pour la fenêtre, pour le fond
+size(int(displayWidth*0.45),displayHeight-100,P2D)
+frame.setLocation(displayWidth-int(displayWidth*0.45), 0)
 background(255)
 noStroke()
 

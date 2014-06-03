@@ -1,6 +1,6 @@
 # Des réglages pour la fenêtre, pour le fond
-size(630,724,P2D)
-frame.setLocation(1366-630, 0)
+size(int(displayWidth*0.45),displayHeight-100,P2D)
+frame.setLocation(displayWidth-int(displayWidth*0.45), 0)
 randomSeed(millis())
 blendMode(BLEND)
 background(255)
@@ -33,6 +33,9 @@ def descend ():
 def agauche ():
     translate (-40, 0)
     
+def adroite ():
+    translate (40, 0)
+    
 def pluspetit():
     scale(0.5)
     
@@ -60,6 +63,31 @@ def hexagone(taille):
         vertex( x, y )
     endShape()
     popMatrix()
+    
+    
+# Des morceaux de peintures
+
+def kupka(taille):
+    tampon = loadImage("kupka.jpg")
+    pushMatrix()
+    scale(taille)
+    image(tampon, 0,0)
+    popMatrix()
+    
+def valensi(taille):
+    tampon = loadImage("valensi.jpg")
+    pushMatrix()
+    scale(taille)
+    image(tampon, 0,0)
+    popMatrix()
+    
+def stanton(taille):
+    tampon = loadImage("stanton.jpg")
+    pushMatrix()
+    scale(taille)
+    image(tampon, 0,0)
+    popMatrix()
+    
 
 # Des opérations magiques
 
