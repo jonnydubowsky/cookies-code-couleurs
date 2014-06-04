@@ -27,14 +27,8 @@ def remonte ():
 def monte ():
     remonte()
     
-def plushaut ():
-    remonte()
-    
 def descend ():
     translate (0, 40)
-    
-def plusbas ():
-    descend()
     
 def agauche ():
     translate (-40, 0)
@@ -70,51 +64,27 @@ def hexagone(taille):
     endShape()
     popMatrix()
     
-def octogone(taille):
-    pushMatrix()
-    translate (taille, taille)
-    beginShape()
-    stroke(0,0)
-    for i in range (8):
-        x = cos( i * PI/4 ) * taille
-        y = sin( i * PI/4 ) * taille
-        vertex( x, y )
-    endShape()
-    popMatrix()
-    
-def triangle(taille):
-    pushMatrix()
-    translate (taille, taille)
-    beginShape()
-    stroke(0,0)
-    for i in [0,1,2]:
-        x = cos( i * PI/2 ) * taille
-        y = sin( i * PI/2 ) * taille
-        vertex( x, y )
-    endShape()
-    popMatrix()
-    
     
 # Des morceaux de peintures
 
 def kupka(taille):
     tampon = loadImage("kupka.jpg")
     pushMatrix()
-    scale(taille/40)
+    scale(taille)
     image(tampon, 0,0)
     popMatrix()
     
 def valensi(taille):
     tampon = loadImage("valensi.jpg")
     pushMatrix()
-    scale(taille/40)
+    scale(taille)
     image(tampon, 0,0)
     popMatrix()
     
 def stanton(taille):
     tampon = loadImage("stanton.jpg")
     pushMatrix()
-    scale(taille/40)
+    scale(taille)
     image(tampon, 0,0)
     popMatrix()
     
@@ -133,30 +103,25 @@ def antonio(couleur):
             cercle(i-12)
         fill(couleur)
         cercle(10)
-        popMatrix()    
+        popMatrix()
         
-def splash(forme = None, fois = None):
-    if fois is None:
-        fois = 30
-    for n in range(fois):
+        
+def splash(forme):
+    for n in range(30):
         pushMatrix()
         scale(1 + (random(10)-5)/20.0)
         translate(random(width-n*3), random(height-n*3))
         forme(n*3)
         popMatrix()
     
-def zoom(forme = None, fois = None):
-    if fois is None:
-        fois = 30
+def zoom(forme, fois):
     for n in range(fois):
         pushMatrix()
         translate(10*n, 10*n)
         forme(n*10)
         popMatrix()
 
-def spirale(forme = None, fois = None):
-    if fois is None:
-        fois = 500
+def spirale(forme, fois):
     pushMatrix()
     translate(width/2, height/2)
     for n in range(fois):
@@ -165,40 +130,47 @@ def spirale(forme = None, fois = None):
         forme(20)
     popMatrix()
     
-def moulin(forme = None, fois = None):
-    if fois is None:
-        fois = 10
-    for n in range(fois):
-        pushMatrix()
-        scale(1 + (random(10)-5)/20.0)
-        translate(random(width), random(height))
-        for tour in range (120):
-            rotate (radians(tour*3))
-            pushMatrix()
-            translate(-20,-20)
-            forme(40)
-            popMatrix()
-        popMatrix() 
-
-    
-    
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
 # Au dessus ce sont les définitions de nos formes      
   
-  
+
 # Copiez les noms de vos formes en dessous de cette ligne        
 # v v v v v v v v v v v v v v v v v v v v v v v v v v v v
 
 
-fill(orange)
-
-moulin(stanton, 30)
-
-moulin(carre, 50)
+spirale (antonio, 50)
 
 fill(blanc)
-plusgrand()
-moulin(triangle, 10)
+splash(hexagone)
+
+fill(rouge)
+monte()
+monte()
+agauche()
+pluspetit()
+retourne()
+spirale(hexagone, 1800)
+
+aumilieu()
+fill(orange)
+pluspetit()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+descend()
+spirale(hexagone, 1800)
 
 
 
