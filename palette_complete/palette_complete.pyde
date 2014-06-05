@@ -7,6 +7,7 @@ background(255)
 noStroke()
 
 # Des couleurs sympas
+noir = color(0, 0, 0)
 blanc = color(255, 255, 255)
 rouge = color(255, 0, 0)
 vert = color(0, 255, 0)
