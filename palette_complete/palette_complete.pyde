@@ -144,18 +144,14 @@ def splash(forme = None, fois = None):
         forme(n*3)
         popMatrix()
     
-def zoom(forme = None, fois = None):
-    if fois is None:
-        fois = 30
+def zoom(forme, fois = 30):
     for n in range(fois):
         pushMatrix()
         translate(10*n, 10*n)
         forme(n*10)
         popMatrix()
 
-def spirale(forme = None, fois = None):
-    if fois is None:
-        fois = 500
+def spirale(forme, fois = 500):
     pushMatrix()
     translate(width/2, height/2)
     for n in range(fois):
@@ -164,9 +160,7 @@ def spirale(forme = None, fois = None):
         forme(20)
     popMatrix()
     
-def moulin(forme = None, fois = None):
-    if fois is None:
-        fois = 10
+def moulin(forme, fois = 10):
     for n in range(fois):
         pushMatrix()
         scale(1 + (random(10)-5)/20.0)
@@ -179,9 +173,7 @@ def moulin(forme = None, fois = None):
             popMatrix()
         popMatrix() 
 
-def tourbillon(forme = None, fois = None, nbras = 6):
-    if fois is None:
-        fois = 500
+def tourbillon(forme, fois = 500, nbras = 3):
     pushMatrix()
     for bras in range(nbras):
         rotate(2*PI/nbras)
