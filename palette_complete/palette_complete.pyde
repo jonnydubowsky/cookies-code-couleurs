@@ -178,6 +178,19 @@ def moulin(forme = None, fois = None):
             popMatrix()
         popMatrix() 
 
+def tourbillon(forme = None, fois = None, nbras = 6):
+    if fois is None:
+        fois = 500
+    pushMatrix()
+    for bras in range(nbras):
+        rotate(2*PI/nbras)
+        for n in range(fois):
+            pushMatrix()
+            rotate(0.1 * n)
+            translate(3 * n, 0)
+            forme(20)
+            popMatrix()
+    popMatrix()
     
     
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
