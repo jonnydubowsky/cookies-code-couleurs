@@ -81,17 +81,13 @@ def octogone(taille):
         vertex( x, y )
     endShape()
     popMatrix()
-    
-def triangle(taille):
+
+p5triangle = triangle
+
+def triangle(taille = 20):
     pushMatrix()
     translate (taille, taille)
-    beginShape()
-    stroke(0,0)
-    for i in [0,1,2]:
-        x = cos( i * PI/2 ) * taille
-        y = sin( i * PI/2 ) * taille
-        vertex( x, y )
-    endShape()
+    p5triangle(taille, 0, 0, taille, -taille, 0)
     popMatrix()
     
     
