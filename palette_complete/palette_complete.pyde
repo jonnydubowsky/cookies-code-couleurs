@@ -96,26 +96,28 @@ def triangle(taille):
     
     
 # Des morceaux de peintures
+tampon_kupka = loadImage("kupka.jpg")
 
 def kupka(taille):
-    tampon = loadImage("kupka.jpg")
     pushMatrix()
     scale(taille/40)
-    image(tampon, 0,0)
+    image(tampon_kupka, 0,0)
     popMatrix()
-    
+
+tampon_valensi = loadImage("valensi.jpg")
+
 def valensi(taille):
-    tampon = loadImage("valensi.jpg")
     pushMatrix()
     scale(taille/40)
-    image(tampon, 0,0)
+    image(tampon_valensi, 0,0)
     popMatrix()
+
+tampon_stanton = loadImage("stanton.jpg")
     
 def stanton(taille):
-    tampon = loadImage("stanton.jpg")
     pushMatrix()
     scale(taille/40)
-    image(tampon, 0,0)
+    image(tampon_stanton, 0,0)
     popMatrix()
     
 
