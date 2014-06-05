@@ -59,7 +59,7 @@ def cercle(rayon):
 def carre(largeur):
     rect(0,0,largeur,largeur)
     
-def hexagone(taille):
+def hexagone(taille = 20):
     pushMatrix()
     translate (taille, taille)
     beginShape()
@@ -71,7 +71,7 @@ def hexagone(taille):
     endShape()
     popMatrix()
     
-def octogone(taille):
+def octogone(taille = 20):
     pushMatrix()
     translate (taille, taille)
     beginShape()
