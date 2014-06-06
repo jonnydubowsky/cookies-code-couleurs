@@ -67,7 +67,7 @@ tri#angle(taille = 20)
 kupka(taille = 20)
 
 valensi(taille = 20)
-#
+
 stanton(taille = 20)
 
 
