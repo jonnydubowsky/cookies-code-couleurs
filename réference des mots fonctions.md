@@ -1,24 +1,34 @@
-# Référence des mots fonctions utilisés pour l'atelier Du code, des couleurs et des cookies
+## Référence des mots fonctions utilisés pour l'atelier Du code, des couleurs et des cookies
 
-## Des couleurs sympas
-noir 
+### Des couleurs sympas
+noir
+
 blanc 
+
 rouge 
+
 vert 
+
 bleu 
+
 violet 
+
 vertsapin 
+#
 orange
 
 
-## Des modes de remix
+### Des modes de remix
 remixdoux ()
+
 remixcool ()
+
 remixpop ()
+#
 remixzero ()
 
 
-## Des déplacements simples
+### Des déplacements simples
 aumilieu()
 
 audepart()
@@ -34,11 +44,11 @@ adroite ()
 pluspetit()
 plusgrand()
 
-    
+   # 
 retourne()
     
 
-## Des formes de base
+### Des formes de base
 
 cercle(rayon)
 
@@ -48,20 +58,20 @@ hexagone(taille = 20)
  
 octogone(taille = 20)
 
-triangle(taille = 20)
+tri#angle(taille = 20)
 
     
     
-## Des morceaux de peintures
+### Des morceaux de peintures
 
 kupka(taille = 20)
 
 valensi(taille = 20)
-
+#
 stanton(taille = 20)
 
 
-## Des opérations magiques
+### Des opérations magiques
 
 antonio(couleur)
            
