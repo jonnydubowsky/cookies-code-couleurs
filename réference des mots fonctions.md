@@ -24,18 +24,18 @@ remixzero ()
 ### Des déplacements simples
 aumilieu()
 
-audepart()
+audepart() 
   
 remonte () = monte () = plushaut ()
 
 descend () = plusbas ()
 
     
-agauche ()    
-adroite ()
+agauche ()     
+adroite ()  
 
-pluspetit()
-plusgrand()
+pluspetit()  
+plusgrand()  
 
 retourne()
     
