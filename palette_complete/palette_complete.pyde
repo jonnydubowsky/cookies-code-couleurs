@@ -192,11 +192,11 @@ def moulin(forme, fois = 10):
             popMatrix()
         popMatrix() 
 
-def tourbillon(forme, fois = 500, nbras = 3):
+def tourbillon(forme, fois = 500, bras = 3):
     pushMatrix()
     for n in range(fois):
-        for bras in range(nbras):
-            rotate(2*PI/nbras)
+        for unbras in range(bras):
+            rotate(2*PI/bras)
             pushMatrix()
             rotate(0.1 * n)
             translate(3 * n, 0)
@@ -212,49 +212,9 @@ def tourbillon(forme, fois = 500, nbras = 3):
 # Copiez les noms de vos formes en dessous de cette ligne        
 # v v v v v v v v v v v v v v v v v v v v v v v v v v v v
 
-
 aumilieu()
-plusbas()
-plusbas()
+tourbillon (forme = stanton, fois = 100, bras = 2)
 
-fill(orange)
-spirale(hexagone, 1000)
-
-agauche()
-fill(vert)
-spirale(cercle, 1000)
-
-plusbas()
-fill(rouge)
-spirale(carre, 1000)
-
-remixdoux()
-audepart()
-
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-plushaut()
-fill(orange)
-spirale(hexagone, 1000)
-
-adroite()
-fill(vert)
-spirale(cercle, 1000)
-
-adroite()
-fill(rouge)
-spirale(carre, 1000)
 
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
 # Ici c'est la fin... 
