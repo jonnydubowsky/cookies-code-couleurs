@@ -65,16 +65,16 @@ def plusgrand():
     scale(2)
     
 def retourne():
-    scale(-1, 0)
+    scale(-1, -1)
     
 def audepart():
     resetMatrix()
 
 # Des formes de base
-def cercle(rayon):
+def cercle(rayon=20):
     ellipse(0,0,rayon,rayon)
     
-def carre(largeur):
+def carre(largeur=20):
     rect(0,0,largeur,largeur)
     
 def hexagone(taille = 20):
@@ -212,8 +212,10 @@ def tourbillon(forme, fois = 500, bras = 3):
 # Copiez les noms de vos formes en dessous de cette ligne        
 # v v v v v v v v v v v v v v v v v v v v v v v v v v v v
 
+fill (rouge)
 aumilieu()
-tourbillon (forme = stanton, fois = 100, bras = 2)
+scale(-1, -1)
+tourbillon (carre, fois=60, bras=5)
 
 
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
