@@ -10,12 +10,26 @@ noStroke()
 # Des couleurs sympas
 noir = color(0, 0, 0)
 blanc = color(255, 255, 255)
-rouge = color(255, 0, 0)
-vert = color(0, 255, 0)
-bleu = color(0, 0, 255)
+rouge = color(245, 0, 0)
+vert = color(0, 245, 0)
+bleu = color(0, 0, 245)
 violet = color(116,49,193)
 vertsapin = color(7,131,16)
 orange = color(255, 150, 60)
+
+
+# Des modes de remix
+def remixdoux ():
+    blendMode(EXCLUSION)
+
+def remixcool ():
+    blendMode(SUBTRACT)
+
+def remixpop ():
+    blendMode(MULTIPLY)
+
+def remixzero ():
+    blendMode(BLEND)
 
 
 # Des déplacements simples
@@ -51,7 +65,10 @@ def plusgrand():
     scale(2)
     
 def retourne():
-    scale(-1, -1)
+    scale(-1, 0)
+    
+def audepart():
+    resetMatrix()
 
 # Des formes de base
 def cercle(rayon):
@@ -196,18 +213,48 @@ def tourbillon(forme, fois = 500, nbras = 3):
 # v v v v v v v v v v v v v v v v v v v v v v v v v v v v
 
 
+aumilieu()
+plusbas()
+plusbas()
+
 fill(orange)
+spirale(hexagone, 1000)
 
-moulin(stanton, 30)
+agauche()
+fill(vert)
+spirale(cercle, 1000)
 
-moulin(carre, 50)
+plusbas()
+fill(rouge)
+spirale(carre, 1000)
 
-fill(blanc)
-plusgrand()
-moulin(triangle, 10)
+remixdoux()
+audepart()
 
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+plushaut()
+fill(orange)
+spirale(hexagone, 1000)
 
+adroite()
+fill(vert)
+spirale(cercle, 1000)
 
+adroite()
+fill(rouge)
+spirale(carre, 1000)
 
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
 # Ici c'est la fin... 
