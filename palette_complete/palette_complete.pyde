@@ -4,6 +4,7 @@ frame.setLocation(displayWidth-int(displayWidth*0.45), 0)
 randomSeed(millis())
 blendMode(BLEND)
 background(255)
+imageMode(CENTER)
 noStroke()
 
 # Des couleurs sympas
@@ -109,14 +110,15 @@ def valensi(taille = 20):
     image(tampon_valensi, 0,0)
     popMatrix()
 
-tampon_stanton = loadImage("stanton.jpg")
-    
+tampons_stanton = [loadImage("stanton%d.png" % i) for i in range(14)]
+
 def stanton(taille = 20):
+    from random import choice
     pushMatrix()
     scale(taille/40.0)
-    image(tampon_stanton, 0,0)
+    image(choice(tampons_stanton), 0,0)
     popMatrix()
-    
+
 
 # Des opérations magiques
 
