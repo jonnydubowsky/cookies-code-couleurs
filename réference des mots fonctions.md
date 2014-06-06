@@ -1,15 +1,14 @@
 ## Référence des mots fonctions utilisés pour l'atelier Du code, des couleurs et des cookies
 
 ### Des couleurs sympas
-noir
-
-blanc
-rouge 
-vert
-bleu 
-violet 
-vertsapin 
-orange
+noir  
+blanc  
+rouge  
+vert  
+bleu  
+violet   
+vertsapin   
+orange  
 
 
 ### Des modes de remix
