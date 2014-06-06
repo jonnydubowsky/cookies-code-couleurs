@@ -5,7 +5,7 @@ Code pour l'atelier Du code, des couleurs et des cookies créé pour le Centre P
 
 Les enfants remixent du code informatique pour produire des formes, des couleurs. Ils ajoutent, copient-collent, transforment leur code, et voient les images changer et évoluer sous leurs yeux, projetées par 14 vidéo-projecteurs sur les murs – c’est à dire 1 vidéo-projecteur par enfant ! Les enfants partent ensuite à la rencontre de 3 tableaux de Kupka, Valensi et McDonald Wright de 1920 à 1955, que le code nous fait revoir autrement.
 
-Nous utilisons Processing en Mode Python, pour la clarté de la syntaxe.
+Nous utilisons Processing en Mode Python, pour la clarté de la syntaxe et pour la facilité à passer une fonction comme paramètre à une autre fonction.
 
 Liens vers la page de l'atelier sur le site du Centre Pompidou: [http://www.centrepompidou.fr/cpv/ressource.action?param.id=FR_R-3b90681c61ca1b8bdba21161869911e&param.idSource=FR_E-3b90681c61ca1b8bdba21161869911e
 ](http://www.centrepompidou.fr/cpv/ressource.action?param.id=FR_R-3b90681c61ca1b8bdba21161869911e&param.idSource=FR_E-3b90681c61ca1b8bdba21161869911e
