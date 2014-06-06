@@ -214,8 +214,11 @@ def tourbillon(forme, fois = 500, bras = 3):
 
 fill (rouge)
 aumilieu()
-scale(-1, -1)
-tourbillon (carre, fois=60, bras=5)
+plusgrand()
+remixdoux() # remixdoux remix les couleurs: 
+            # le rouge d'un carré devient bleu sur le blanc du fond
+            # et il devient blanc sur le rouge des autres carrés!
+tourbillon (carre, fois=60, bras=7)
 
 
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
