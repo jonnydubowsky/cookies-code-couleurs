@@ -3,18 +3,12 @@
 ### Des couleurs sympas
 noir
 
-blanc 
-
+blanc
 rouge 
-
-vert 
-
+vert
 bleu 
-
 violet 
-
 vertsapin 
-#
 orange
 
 
@@ -24,7 +18,7 @@ remixdoux ()
 remixcool ()
 
 remixpop ()
-#
+
 remixzero ()
 
 
@@ -44,22 +38,20 @@ adroite ()
 pluspetit()
 plusgrand()
 
-   # 
 retourne()
     
 
 ### Des formes de base
 
-cercle(rayon)
+cercle(rayon=20)
 
-carre(largeur)
+carre(largeur=20)
     
 hexagone(taille = 20)
  
 octogone(taille = 20)
 
-tri#angle(taille = 20)
-
+triangle(taille = 20)
     
     
 ### Des morceaux de peintures
