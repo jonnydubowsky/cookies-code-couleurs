@@ -9,6 +9,8 @@ bleu
 violet   
 vertsapin   
 orange  
+rose  
+jaune  
 
 
 ### Des modes de remix
@@ -66,7 +68,7 @@ stanton(taille = 20)
 
 antonio(couleur)
            
-splash(forme = None, fois = None)
+splash(forme, fois = 30)
     
 zoom(forme, fois = 30)
 

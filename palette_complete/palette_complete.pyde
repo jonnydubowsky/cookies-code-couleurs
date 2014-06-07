@@ -16,6 +16,8 @@ bleu = color(0, 0, 245)
 violet = color(116,49,193)
 vertsapin = color(7,131,16)
 orange = color(255, 150, 60)
+rose = color(255, 111, 207)
+jaune = color(245, 245, 0)
 
 
 # Des modes de remix
@@ -153,9 +155,7 @@ def antonio(couleur):
         cercle(10)
         popMatrix()    
         
-def splash(forme = None, fois = None):
-    if fois is None:
-        fois = 30
+def splash(forme, fois = 30):
     for n in range(fois):
         pushMatrix()
         scale(1 + (random(10)-5)/20.0)
