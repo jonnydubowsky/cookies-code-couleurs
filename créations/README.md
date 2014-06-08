@@ -14,6 +14,9 @@ Jeanne B
 
 ![image](jeanne_b_2/jeanne_b_2.png)
 
+Romain
+
+![image](romain_marine/romain_marine.png)
 
 Mika
 ![image](Mika1/mika1.png)
