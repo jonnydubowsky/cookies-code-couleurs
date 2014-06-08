@@ -19,6 +19,59 @@ orange = color(255, 150, 60)
 rose = color(255, 111, 207)
 jaune = color(245, 245, 0)
 
+couleur = bleu
+alpha = 255
+
+def peinture(c,a=255):
+    couleur = c
+    alpha = a
+    fill(couleur,alpha)
+
+couleursprecedentes= []
+alphaprecedents = []
+
+def memorisepeinture():
+    couleursprecedentes.append(couleur)
+    alphaprecedents.append(alpha)
+
+def rappellepeinture():
+    peinture(couleursprecedentes.pop(),alphaprecedents.pop())
+
+def dillue():
+    alpha = alpha/1.2
+    fill(couleur,alpha)
+
+def concentre():
+    alpha = alpha*1.2
+    fill(couleur,alpha)
+
+def changecouleur(fois=1, changehue=lambda h: h, changesaturation=lambda s: s, changebrightness=lambda h:h):
+    h = hue(couleur)
+    s = saturation(couleur)
+    b = brightness(couleur)
+    for n in range(fois):
+        h = changehue(h)
+        s = changesaturation(s)
+        b = changebrightness(b)
+    colorMode(HSB)
+    couleur=color(h,s,b)
+    fill(couleur,alpha)
+    colorMode(RGB)
+
+def sature(fois=1):
+    changecouleur(fois,changesaturation=lambda s:s*1.1)
+
+def desature(fois=1):
+    changecouleur(fois,changesaturation=lambda s:s/1.1)
+
+def plusfonce(fois=1):
+    changecouleur(fois,changebrightness=lambda b:b/1.1)
+
+def plusclair(fois=1):
+    changecouleur(fois,changebrightness=lambda b:b*1.1)
+
+def cycle(periode):
+    changecouleur(changehue=lambda h: (h + 256 / periode) % 256)
 
 # Des modes de remix
 def remixdoux ():
