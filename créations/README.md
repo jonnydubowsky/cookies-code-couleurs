@@ -14,6 +14,10 @@ Jeanne B
 
 ![image](jeanne_b_2/jeanne_b_2.png)
 
+
+Margot 
+![image](margot.jpg)
+
 Romain
 
 ![image](romain_marine/romain_marine.png)
@@ -26,3 +30,5 @@ Jeanne HD
 ![image](jeanne_hd/jeanne_hd.png)
 
 
+Anonyme !
+![image](anonyme.jpg)
