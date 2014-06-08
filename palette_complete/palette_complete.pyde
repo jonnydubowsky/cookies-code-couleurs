@@ -265,14 +265,31 @@ def tourbillon(forme, fois = 500, bras = 3):
 # Copiez les noms de vos formes en dessous de cette ligne        
 # v v v v v v v v v v v v v v v v v v v v v v v v v v v v
 
-fill (rouge)
-aumilieu()
-plusgrand()
-remixdoux() # remixdoux remix les couleurs: 
-            # le rouge d'un carré devient bleu sur le blanc du fond
-            # et il devient blanc sur le rouge des autres carrés!
-tourbillon (carre, fois=60, bras=7)
+def palette(changecouleur):
+    for n in range(15):
+        pluspetit()
+        plusbas()
+        plusgrand()
+        adroite()
+        carre(100)
+        changecouleur()
+    for n in range(15):
+        agauche()
+    for n in range(3):
+        remonte()
 
+peinture(rouge)
+palette(lambda: dillue())  # contraire de dillue = concentre
+
+peinture(rouge)
+palette(lambda: desature()) # contraire de desature = sature
+memorisepeinture()
+
+peinture(rouge)
+palette(lambda: plusfonce()) # contraire de plusfonce = plusclair
+
+rappellepeinture()
+palette(lambda : cycle(50)) # contraire de cycle(x) = cycle(-x)
 
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
 # Ici c'est la fin... 
