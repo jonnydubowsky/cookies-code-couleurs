@@ -10,7 +10,7 @@ Julien
 ![image](julien1/julien1-a.png)
 
 ![image](julien2/julien2-a.png)
-![image](julien2/julien2-a.png)
+![image](julien2/julien2-b.png)
 
 Jeanne B
 ![image](jeanne_b/jeanne_b.png/)
