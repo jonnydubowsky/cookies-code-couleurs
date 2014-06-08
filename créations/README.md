@@ -6,8 +6,8 @@ Mika
 ![image](Mika1/mika1.png)
 
 Julien
-![image](julien2/julien1-b.png)
-![image](julien2/julien1-a.png)
+![image](julien1/julien1-b.png)
+![image](julien1/julien1-a.png)
 
 ![image](julien2/julien2-a.png)
 ![image](julien2/julien2-a.png)
