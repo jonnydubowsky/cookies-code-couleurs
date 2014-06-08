@@ -2,7 +2,7 @@
 
 Dans ce dossier vous trouverez quelques sketches et quelques captures d'écran des créations lors de l'atelier du 8 juin 2014 au Centre Pompidou.
 
-Julien
+Julien N
 ![image](julien1/julien1-b.png)
 ![image](julien1/julien1-a.png)
 
@@ -19,7 +19,6 @@ Margot
 ![image](margot.jpg)
 
 Romain
-
 ![image](romain_marine/romain_marine.png)
 
 Mika
@@ -30,5 +29,5 @@ Jeanne HD
 ![image](jeanne_hd/jeanne_hd.png)
 
 
-Anonyme !
-![image](anonyme.jpg)
+Le grand Raphaël !
+![image](raphael.jpg)
