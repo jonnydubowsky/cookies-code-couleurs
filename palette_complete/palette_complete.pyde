@@ -58,17 +58,17 @@ def changecouleur(fois=1, changehue=lambda h: h, changesaturation=lambda s: s, c
     fill(couleur,alpha)
     colorMode(RGB)
 
-def sature(fois=1):
+def plusvif(fois=1):
     changecouleur(fois,changesaturation=lambda s:s*1.1)
 
-def desature(fois=1):
+def moinsvif(fois=1):
     changecouleur(fois,changesaturation=lambda s:s/1.1)
-
-def plusfonce(fois=1):
-    changecouleur(fois,changebrightness=lambda b:b/1.1)
 
 def plusclair(fois=1):
     changecouleur(fois,changebrightness=lambda b:b*1.1)
+
+def moinsclair(fois=1):
+    changecouleur(fois,changebrightness=lambda b:b/1.1)
 
 def cycle(periode):
     changecouleur(changehue=lambda h: (h + 256 / periode) % 256)
@@ -282,11 +282,11 @@ peinture(rouge)
 palette(lambda: dillue())  # contraire de dillue = concentre
 
 peinture(rouge)
-palette(lambda: desature()) # contraire de desature = sature
+palette(lambda: moinsvif()) # contraire de moinsvif = plusvif
 memorisepeinture()
 
 peinture(rouge)
-palette(lambda: plusfonce()) # contraire de plusfonce = plusclair
+palette(lambda: moinsclair()) # contraire de moinsclair = plusclair
 
 rappellepeinture()
 palette(lambda : cycle(50)) # contraire de cycle(x) = cycle(-x)
