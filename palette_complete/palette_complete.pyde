@@ -59,23 +59,23 @@ def nouvellecouleur(modele, fois=1, changehue=lambda h: h, changesaturation=lamb
     colorMode(RGB)
     return nouvellecouleur
 
-def changecouleur(**kwargs):
+def alterecouleur(**kwargs):
     peinture(nouvellecouleur(couleur_peinture, **kwargs), transparence_peinture)
 
 def plusvif(fois=1):
-    changecouleur(fois=fois,changesaturation=lambda s:s*1.1)
+    alterecouleur(fois=fois,changesaturation=lambda s:s*1.1)
 
 def moinsvif(fois=1):
-    changecouleur(fois=fois,changesaturation=lambda s:s/1.1)
+    alterecouleur(fois=fois,changesaturation=lambda s:s/1.1)
 
 def plusclair(fois=1):
-    changecouleur(fois=fois,changebrightness=lambda b:b*1.1)
+    alterecouleur(fois=fois,changebrightness=lambda b:b*1.1)
 
 def moinsclair(fois=1):
-    changecouleur(fois=fois,changebrightness=lambda b:b/1.1)
+    alterecouleur(fois=fois,changebrightness=lambda b:b/1.1)
 
 def cycle(periode):
-    changecouleur(changehue=lambda h: (h + 256 / periode) % 256)
+    alterecouleur(changehue=lambda h: (h + 256 / periode) % 256)
 
 def tendvers(couleur_cible,fois=1):
     couleur_cible = nouvellecouleur(couleur_peinture, changehue=lambda h: hue(couleur_cible))
