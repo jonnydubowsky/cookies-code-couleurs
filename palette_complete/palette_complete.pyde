@@ -3,7 +3,7 @@ size(int(displayWidth*0.45),displayHeight-100,P2D)
 frame.setLocation(displayWidth-int(displayWidth*0.45), 0)
 randomSeed(millis())
 blendMode(BLEND)
-background(255)
+aackground(255)
 imageMode(CENTER)
 noStroke()
 
@@ -19,31 +19,29 @@ orange = color(255, 150, 60)
 rose = color(255, 111, 207)
 jaune = color(245, 245, 0)
 
-couleur = bleu
-alpha = 255
+couleur_peinture = bleu
+transparence_peinture = 255
 
-def peinture(c, a=alpha):
-    couleur = c
-    alpha = a
-    fill(couleur,alpha)
+def peinture(couleur, transparence = 255):
+    couleur_peinture = couleur
+    transparence_peinture = transparence
+    fill(couleur_peinture,transparence_peinture)
 
-couleursprecedentes= []
-alphaprecedents = []
+couleurs_precedentes= []
+transparences_precedentes = []
 
 def memorisepeinture():
-    couleursprecedentes.append(couleur)
-    alphaprecedents.append(alpha)
+    couleurs_precedentes.append(couleur_peinture)
+    transparences_precedentes.append(transparence_peinture)
 
 def rappellepeinture():
-    peinture(couleursprecedentes.pop(),alphaprecedents.pop())
+    peinture(couleurs_precedentes.pop(),transparences_precedentes.pop())
 
 def dillue():
-    alpha = alpha/1.2
-    fill(couleur,alpha)
+    peinture(couleur_peinture, transparence_peinture/1.2)
 
 def concentre():
-    alpha = alpha*1.2
-    fill(couleur,alpha)
+    peinture(couleur_peinture, transparence_peinture*1.2)
 
 def nouvellecouleur(modele, fois=1, changehue=lambda h: h, changesaturation=lambda s: s, changebrightness=lambda h:h):
     h = hue(modele)
@@ -59,7 +57,7 @@ def nouvellecouleur(modele, fois=1, changehue=lambda h: h, changesaturation=lamb
     return nouvellecouleur
 
 def changecouleur(**kwargs):
-    peinture(nouvellecouleur(couleur, **kwargs))
+    peinture(nouvellecouleur(couleur_peinture, **kwargs))
 
 def plusvif(fois=1):
     changecouleur(fois=fois,changesaturation=lambda s:s*1.1)
@@ -77,9 +75,11 @@ def cycle(periode):
     changecouleur(changehue=lambda h: (h + 256 / periode) % 256)
 
 def tendvers(couleurCible,fois=1):
-    couleurCible = nouvellecouleur(couleurCible, changesaturation=lambda s: saturation(couleur), changebrightness=lambda b: brightness(couleur))
-    peinture(lerpColor(couleur, couleurCible, .1*fois))
-    
+    couleurCible = nouvellecouleur(couleurCible, 
+                                   changesaturation=lambda s: saturation(couleur_peinture),
+                                   changebrightness=lambda b: brightness(couleur_peinture))
+    peinture(lerpColor(couleur_peinture, couleurCible, .1*fois))
+
 # Des modes de remix
 def remixdoux ():
     blendMode(EXCLUSION)
