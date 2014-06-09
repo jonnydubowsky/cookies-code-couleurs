@@ -12,6 +12,19 @@ orange
 rose  
 jaune  
 
+### Des changement de couleur
+
+peinture()
+plustransparent()
+moinstranparent()
+plusclair()
+moinsclair()
+plusvif()
+moinsvif()
+tendvers()
+cycle()
+memorisepeinture()
+rappellepeinture()
 
 ### Des modes de remix
 remixdoux ()
