@@ -37,10 +37,10 @@ def memorisepeinture():
 def rappellepeinture():
     peinture(couleurs_precedentes.pop(),transparences_precedentes.pop())
 
-def dillue():
+def plustransparent():
     peinture(couleur_peinture, transparence_peinture/1.2)
 
-def concentre():
+def moinstransparent():
     peinture(couleur_peinture, transparence_peinture*1.2)
 
 def nouvellecouleur(modele, fois=1, changehue=lambda h: h, changesaturation=lambda s: s, changebrightness=lambda h:h):
@@ -284,7 +284,7 @@ def palette(changecouleur):
         remonte()
 
 peinture(rouge)
-palette(lambda: dillue())  # contraire de dillue = concentre
+palette(lambda: plustransparent())  # contraire de plustransparent = moinstransparent
 
 peinture(rouge)
 palette(lambda: moinsvif()) # contraire de moinsvif = plusvif
