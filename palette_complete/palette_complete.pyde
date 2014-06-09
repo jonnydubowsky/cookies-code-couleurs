@@ -74,11 +74,9 @@ def moinsclair(fois=1):
 def cycle(periode):
     changecouleur(changehue=lambda h: (h + 256 / periode) % 256)
 
-def tendvers(couleurCible,fois=1):
-    couleurCible = nouvellecouleur(couleurCible, 
-                                   changesaturation=lambda s: saturation(couleur_peinture),
-                                   changebrightness=lambda b: brightness(couleur_peinture))
-    peinture(lerpColor(couleur_peinture, couleurCible, .1*fois))
+def tendvers(couleur_cible,fois=1):
+    couleur_cible = nouvellecouleur(couleur_peinture, changehue=lambda h: hue(couleur_cible))
+    peinture(lerpColor(couleur_peinture, couleur_cible, .1*fois))
 
 # Des modes de remix
 def remixdoux ():
