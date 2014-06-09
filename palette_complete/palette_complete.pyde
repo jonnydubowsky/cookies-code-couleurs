@@ -35,7 +35,10 @@ def memorisepeinture():
     transparences_precedentes.append(transparence_peinture)
 
 def rappellepeinture():
-    peinture(couleurs_precedentes.pop(),transparences_precedentes.pop())
+    if len(couleurs_precedentes)==1:
+       peinture(couleurs_precedentes[0], transparences_precedentes[0])
+   elseif len(couleurs_precedentes)>1:
+       peinture(couleurs_precedentes.pop(),transparences_precedentes.pop())
 
 def plustransparent():
     peinture(couleur_peinture, transparence_peinture/1.2)
@@ -283,6 +286,7 @@ def palette(changecouleur):
     for n in range(4):
         remonte()
 
+rappellepeinture()
 peinture(rouge)
 palette(lambda: plustransparent())  # contraire de plustransparent = moinstransparent
 
@@ -294,7 +298,6 @@ peinture(rouge)
 palette(lambda: moinsclair()) # contraire de moinsclair = plusclair
 
 rappellepeinture()
-memorisepeinture()
 palette(lambda : cycle(50)) # contraire de cycle(x) = cycle(-x)
 
 rappellepeinture()
