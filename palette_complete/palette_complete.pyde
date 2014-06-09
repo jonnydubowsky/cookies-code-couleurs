@@ -3,7 +3,7 @@ size(int(displayWidth*0.45),displayHeight-100,P2D)
 frame.setLocation(displayWidth-int(displayWidth*0.45), 0)
 randomSeed(millis())
 blendMode(BLEND)
-aackground(255)
+background(255)
 imageMode(CENTER)
 noStroke()
 
@@ -37,7 +37,7 @@ def memorisepeinture():
 def rappellepeinture():
     if len(couleurs_precedentes)==1:
        peinture(couleurs_precedentes[0], transparences_precedentes[0])
-   elseif len(couleurs_precedentes)>1:
+    elif len(couleurs_precedentes)>1:
        peinture(couleurs_precedentes.pop(),transparences_precedentes.pop())
 
 def plustransparent():
