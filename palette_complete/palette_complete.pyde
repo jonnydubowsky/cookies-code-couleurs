@@ -60,7 +60,7 @@ def nouvellecouleur(modele, fois=1, changehue=lambda h: h, changesaturation=lamb
     return nouvellecouleur
 
 def changecouleur(**kwargs):
-    peinture(nouvellecouleur(couleur_peinture, **kwargs))
+    peinture(nouvellecouleur(couleur_peinture, **kwargs), transparence_peinture)
 
 def plusvif(fois=1):
     changecouleur(fois=fois,changesaturation=lambda s:s*1.1)
@@ -79,7 +79,7 @@ def cycle(periode):
 
 def tendvers(couleur_cible,fois=1):
     couleur_cible = nouvellecouleur(couleur_peinture, changehue=lambda h: hue(couleur_cible))
-    peinture(lerpColor(couleur_peinture, couleur_cible, .1*fois))
+    peinture(lerpColor(couleur_peinture, couleur_cible, .1*fois), transparence_peinture)
 
 # Des modes de remix
 def remixdoux ():
