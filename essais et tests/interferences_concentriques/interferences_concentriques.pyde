@@ -22,6 +22,9 @@ randomSeed(0)
 blendMode(BLEND)
 background(255)    
 
+#Copiez vos formes en dessous 
+#    v    v     v    v    v
+
 unecouche(color(7,131,16))
 unecouche(color(116,49,193))
 
