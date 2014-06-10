@@ -19,6 +19,67 @@ orange = color(255, 150, 60)
 rose = color(255, 111, 207)
 jaune = color(245, 245, 0)
 
+couleur_peinture = bleu
+transparence_peinture = 255
+
+def peinture(couleur, transparence = 255):
+    couleur_peinture = couleur
+    transparence_peinture = transparence
+    fill(couleur_peinture,transparence_peinture)
+
+couleurs_precedentes= []
+transparences_precedentes = []
+
+def memorisepeinture():
+    couleurs_precedentes.append(couleur_peinture)
+    transparences_precedentes.append(transparence_peinture)
+
+def rappellepeinture():
+    if len(couleurs_precedentes)==1:
+       peinture(couleurs_precedentes[0], transparences_precedentes[0])
+    elif len(couleurs_precedentes)>1:
+       peinture(couleurs_precedentes.pop(),transparences_precedentes.pop())
+
+def plustransparent():
+    peinture(couleur_peinture, transparence_peinture/1.2)
+
+def moinstransparent():
+    peinture(couleur_peinture, transparence_peinture*1.2)
+
+def nouvellecouleur(modele, fois=1, changehue=lambda h: h, changesaturation=lambda s: s, changebrightness=lambda h:h):
+    h = hue(modele)
+    s = saturation(modele)
+    b = brightness(modele)
+    for n in range(fois):
+        h = changehue(h)
+        s = changesaturation(s)
+        b = changebrightness(b)
+    colorMode(HSB)
+    nouvellecouleur=color(h,s,b)
+    colorMode(RGB)
+    return nouvellecouleur
+
+def alterecouleur(**kwargs):
+    peinture(nouvellecouleur(couleur_peinture, **kwargs), transparence_peinture)
+
+def plusvif(fois=1):
+    alterecouleur(fois=fois,changesaturation=lambda s:s*1.1)
+
+def moinsvif(fois=1):
+    alterecouleur(fois=fois,changesaturation=lambda s:s/1.1)
+
+def plusclair(fois=1):
+    alterecouleur(fois=fois,changebrightness=lambda b:b*1.1)
+
+def moinsclair(fois=1):
+    alterecouleur(fois=fois,changebrightness=lambda b:b/1.1)
+
+def cycle(periode):
+    alterecouleur(changehue=lambda h: (h + 256 / periode) % 256)
+
+def tendvers(couleur_cible,fois=1):
+    couleur_cible = nouvellecouleur(couleur_peinture, changehue=lambda h: hue(couleur_cible))
+    peinture(lerpColor(couleur_peinture, couleur_cible, .1*fois), transparence_peinture)
 
 # Des modes de remix
 def remixdoux ():
@@ -212,14 +273,34 @@ def tourbillon(forme, fois = 500, bras = 3):
 # Copiez les noms de vos formes en dessous de cette ligne        
 # v v v v v v v v v v v v v v v v v v v v v v v v v v v v
 
-fill (rouge)
-aumilieu()
-plusgrand()
-remixdoux() # remixdoux remix les couleurs: 
-            # le rouge d'un carré devient bleu sur le blanc du fond
-            # et il devient blanc sur le rouge des autres carrés!
-tourbillon (carre, fois=60, bras=7)
+def palette(changecouleur):
+    for n in range(15):
+        pluspetit()
+        plusbas()
+        plusgrand()
+        adroite()
+        carre(100)
+        changecouleur()
+    for n in range(15):
+        agauche()
+    for n in range(4):
+        remonte()
 
+rappellepeinture()
+peinture(rouge)
+palette(lambda: plustransparent())  # contraire de plustransparent = moinstransparent
 
+peinture(rouge)
+palette(lambda: moinsvif()) # contraire de moinsvif = plusvif
+memorisepeinture()
+
+peinture(rouge)
+palette(lambda: moinsclair()) # contraire de moinsclair = plusclair
+
+rappellepeinture()
+palette(lambda : cycle(50)) # contraire de cycle(x) = cycle(-x)
+
+rappellepeinture()
+palette(lambda : tendvers(jaune))
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
 # Ici c'est la fin... 
