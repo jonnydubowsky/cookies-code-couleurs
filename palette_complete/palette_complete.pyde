@@ -273,34 +273,5 @@ def tourbillon(forme, fois = 500, bras = 3):
 # Copiez les noms de vos formes en dessous de cette ligne        
 # v v v v v v v v v v v v v v v v v v v v v v v v v v v v
 
-def palette(changecouleur):
-    for n in range(15):
-        pluspetit()
-        plusbas()
-        plusgrand()
-        adroite()
-        carre(100)
-        changecouleur()
-    for n in range(15):
-        agauche()
-    for n in range(4):
-        remonte()
-
-rappellepeinture()
-peinture(rouge)
-palette(lambda: plustransparent())  # contraire de plustransparent = moinstransparent
-
-peinture(rouge)
-palette(lambda: moinsvif()) # contraire de moinsvif = plusvif
-memorisepeinture()
-
-peinture(rouge)
-palette(lambda: moinsclair()) # contraire de moinsclair = plusclair
-
-rappellepeinture()
-palette(lambda : cycle(50)) # contraire de cycle(x) = cycle(-x)
-
-rappellepeinture()
-palette(lambda : tendvers(jaune))
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
 # Ici c'est la fin... 
