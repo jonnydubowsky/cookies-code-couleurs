@@ -23,6 +23,7 @@ couleur_peinture = bleu
 transparence_peinture = 255
 
 def peinture(couleur, transparence = 255):
+    global couleur_peinture, transparence_peinture
     couleur_peinture = couleur
     transparence_peinture = transparence
     fill(couleur_peinture,transparence_peinture)
