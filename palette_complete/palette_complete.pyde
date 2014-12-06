@@ -275,4 +275,6 @@ def tourbillon(forme, fois = 500, bras = 3):
 # v v v v v v v v v v v v v v v v v v v v v v v v v v v v
 
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
-# Ici c'est la fin... 
+# Ici c'est la fin... on enregistre une image pour la postérité
+import datetime
+save(datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + ".png")
