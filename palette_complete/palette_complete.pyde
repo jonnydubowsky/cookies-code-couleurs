@@ -265,13 +265,13 @@ def tourbillon(forme, fois = 500, bras = 3):
             forme()
             popMatrix()
     popMatrix()
-    
-    
+
+
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
-# Au dessus ce sont les définitions de nos formes      
-  
-  
-# Copiez les noms de vos formes en dessous de cette ligne        
+# Au dessus ce sont les définitions de nos formes
+
+
+# Copiez les noms de vos formes en dessous de cette ligne
 # v v v v v v v v v v v v v v v v v v v v v v v v v v v v
 
 # ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
