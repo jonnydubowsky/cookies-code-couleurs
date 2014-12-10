@@ -8,7 +8,7 @@ Les enfants remixent du code informatique pour produire des formes, des couleurs
 
 Les créations des enfants : https://github.com/juliendorra/cookies-code-couleurs/blob/master/cre%CC%81ations/README.md
 
-Nous utilisons Processing en Mode Python, pour la clarté de la syntaxe et pour la facilité à passer une fonction comme paramètre à une autre fonction.
+Nous utilisons Processing en Mode Python, pour la clarté de la syntaxe, pour la lisibilité des paramètres nommés, et pour la facilité à passer une fonction comme paramètre à une autre fonction.
 
 Ce post raconte brièvement l'enjeu du format au plan artistique, de la médiation et pédagogique : [http://ils.sont.la/post/programmer-au-musee-le-code-creatif-materiau-mediation](http://ils.sont.la/post/programmer-au-musee-le-code-creatif-materiau-mediation)
 
