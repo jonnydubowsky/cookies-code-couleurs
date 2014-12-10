@@ -1,6 +1,6 @@
 ## les créations lors de l'atelier
 
-Dans ce dossier vous trouverez quelques sketches et quelques captures d'écran des créations lors de l'atelier du 8 juin 2014 au Centre Pompidou.
+Dans [ce dossier](https://github.com/juliendorra/cookies-code-couleurs/tree/master/cre%CC%81ations) vous trouverez quelques sketches et quelques captures d'écran des créations lors de l'atelier du 8 juin 2014 au Centre Pompidou.
 
 Julien N
 ![image](julien1/julien1-b.png)
