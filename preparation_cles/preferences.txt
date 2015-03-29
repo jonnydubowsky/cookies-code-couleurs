@@ -1,0 +1,2 @@
+examples.jycessing.mode.PythonMode.visible=Examples\Code, couleurs, cookies;Examples
+last.sketch.mode=jycessing.mode.PythonMode
