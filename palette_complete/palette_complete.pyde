@@ -1,6 +1,6 @@
 # Des réglages pour la fenêtre, pour le fond
-size(int(displayWidth*0.45),displayHeight-100,P2D)
-frame.setLocation(displayWidth-int(displayWidth*0.45), 0)
+size(1024,768,P2D)
+frame.setLocation(1024, 0)
 randomSeed(millis())
 blendMode(BLEND)
 background(255)
